@@ -10,7 +10,8 @@ function topThreeWords(text) {
         }, {});
 
     return Object.keys(topWords)
-        .sort((a,b) => topWords[b] - topWords[a]).slice(0, 3)
+        .sort((a,b) => topWords[b] - topWords[a])
+        .slice(0, 3)
  
 }
 
