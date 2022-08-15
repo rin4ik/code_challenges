@@ -1,14 +1,11 @@
-var groupAnagrams = function(list) {
-    let hashTable = {}
-    for(let val of list) {
-	    const sorted = val.split('').sort().join('')
-        if(hashTable[sorted]) {
-      	    hashTable[sorted].push(val)
-        } else {
-      	    hashTable[sorted] = [val]
-        }
+var groupAnagrams = function(strs) {
+    let ht = {}
+    for(let str of strs) {
+	    const sorted = str.split('').sort().join('')
+        if (ht[sorted]) ht[sorted].push(str)
+        else ht[sorted] = [str]
     }
-    return Object.values(hashTable)
+    return Object.values(ht)
 };
 console.log(groupAnagrams(['ab', 'bba', 'abb', 'bc']))
 // result: [["ab"], ["bba", "abb"], ["bc"]]
