@@ -1,6 +1,6 @@
  // first way using str split and reverse array and checking if they are equal O(n)
 function palindrome(str) {
-	str = str.replace(/[^\w]/gi, '').toLowerCase() 
+	str = str.replace(/[^\w]/gi, '').toLowerCase()
     return str === str.split('').reverse().join('')
 }
  // # second way is more better using Pointer method
