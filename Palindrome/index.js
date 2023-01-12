@@ -3,9 +3,9 @@ function palindrome(str) {
 	str = str.replace(/[^\w]/gi, '').toLowerCase()
     return str === str.split('').reverse().join('')
 }
+
  // # second way is more better using Pointer method
  // O(n/2) will will loop twice faster using left and right pointer
-
 function palindrome(str) {
 	str = str.replace(/[^\w]/gi, '').toLowerCase()
     let left = 0
